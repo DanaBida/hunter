@@ -15,8 +15,8 @@ const App = ({ messages, loadMessages }) => {
     }, 15000);
   }, []);
 
-  return messages.map(({ botMsg, userMsg }) => (
-    <BotUserPairCards botMsg={botMsg} userMsg={userMsg} />
+  return messages.map(({ botMsg, userMsg }, index) => (
+    <BotUserPairCards botMsg={botMsg} userMsg={userMsg} key={`${userEmail}-${index}`} />
   ));
 };
 
